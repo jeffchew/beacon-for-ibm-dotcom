@@ -7,14 +7,16 @@
 'use strict';
 
 const Audit = require('lighthouse').Audit;
-const i18n = require('../../../node_modules/lighthouse/lighthouse-core/lib/i18n/i18n.js');
+const constants = require('../../config/constants');
+const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'Carbon for IBM.com Card copy uses the recommended character count.',
+  title:
+    'The Carbon for IBM.com Card component is using the recommended character count for the copy.',
   failureTitle:
-    'Carbon for IBM.com Card copy does not use the recommended character count.',
+    'The Carbon for IBM.com Card component is not using the recommended character count for the copy.',
   description:
-    'The Card component has a recommended max amount of characters to be used in the copy. [Learn more](https://www.ibm.com/standards/web/carbon-for-ibm-dotcom/components/card).',
+    'The Card component has a recommended maximum number of characters for the copy. See the [content guidance](https://www.ibm.com/standards/carbon/components/cards/#content-guidance-for-card) for more information.',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);

@@ -7,13 +7,14 @@
 'use strict';
 
 const Audit = require('lighthouse').Audit;
-const i18n = require('../../../../node_modules/lighthouse/lighthouse-core/lib/i18n/i18n.js');
+const constants = require('../../../config/constants');
+const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'Digital Data Object `language` property is set.',
-  failureTitle: 'Digital Data Object `language` property is missing.',
+  title: 'The Digital Data Object `language` property is set.',
+  failureTitle: 'The Digital Data Object `language` property is missing.',
   description:
-    'This property is used for localization and translation services. [Learn more](https://pages.github.ibm.com/digital-behavior/docs/stds-ddo.html#15-page-information).',
+    'The Digital Data Object language property is used for localization and translation services. [Learn more](https://pages.github.ibm.com/digital-behavior/docs/stds-ddo.html#15-page-information).',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);

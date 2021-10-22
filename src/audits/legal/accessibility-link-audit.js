@@ -7,13 +7,14 @@
 'use strict';
 
 const Audit = require('lighthouse').Audit;
-const i18n = require('../../../node_modules/lighthouse/lighthouse-core/lib/i18n/i18n.js');
+const constants = require('../../config/constants');
+const i18n = require(constants.paths.i18n);
 
 const UIStrings = {
-  title: 'Link to IBM Accessibility exists.',
-  failureTitle: 'Link to IBM Accessibility does not exist.',
+  title: 'The link to IBM Accessibility is included on the page.',
+  failureTitle: 'The link to IBM Accessibility is missing.',
   description:
-    'This is automatically included as part of the IBM Footer, but in case a custom implementation exists, this would potentially be omitted by the application team.',
+    'The link to IBM Accessibility is automatically included as part of the IBM Footer component. You must use the Carbon for IBM.com Footer component to ensure this and all footer links are included on the page. [Learn more](https://www.ibm.com/standards/carbon/components/footer).',
 };
 
 const str_ = i18n.createMessageInstanceIdFn(__filename, UIStrings);
